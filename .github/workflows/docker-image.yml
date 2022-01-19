@@ -21,8 +21,8 @@ jobs:
       run: | 
         docker version
         # 登录阿里云镜像仓库
-        docker login --username=${{ secrets.DOCKER_HUB_USERNAME }} --password=${{ secrets.DOCKER_HUB_PASSWORD }} hub.docker.com
+        docker login --username=${{ secrets.DOCKER_HUB_USERNAME }} --password=${{ secrets.DOCKER_HUB_PASSWORD }}
         # 使用Dockerfile构建镜像
-        docker build . --file Dockerfile --tag hub.docker.com/aileen5150/hanlp-jupyterlab
+        docker build . --file Dockerfile --tag hanlp-jupyterlab
         # 推送镜像到镜像仓库
-        docker push hub.docker.com/aileen5150/hanlp-jupyterlab
+        docker push hanlp-jupyterlab
